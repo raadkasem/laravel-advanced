@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('channel', 'App\Http\Controllers\ChannelController@index');
+Route::get('posts/create', 'App\Http\Controllers\PostController@create');
