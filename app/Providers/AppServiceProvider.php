@@ -25,6 +25,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::share('channels' , Channel::orderBy('name')->get());
+    // Option1 : pass channel with every single view.
+    // View::share('channels' , Channel::orderBy('name')->get())
+
+    //        Option 2 : pass channels parameter to only specific views
+        View::composer(['post.create', 'channel.index'],function ($view){
+             $view->with('channels' , Channel::orderBy('name')->get());
+        });
     }
 }
