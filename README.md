@@ -8,6 +8,6 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Facades [Docs](https://laravel.com/docs/9.x/facades)
+## [Facades](https://laravel.com/docs/9.x/facades)
 
 In a Laravel application, a facade is a class that provides access to an object from the container. The machinery that makes this work is in the Facade class.

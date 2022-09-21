@@ -1,5 +1,6 @@
 <?php
 
+use App\Postcard;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,12 @@ Route::get('/', function () {
 
 Route::get('channel', 'App\Http\Controllers\ChannelController@index');
 Route::get('posts/create', 'App\Http\Controllers\PostController@create');
+
+Route::get('/postcards', function (){
+    $postcardService = new \App\PostcardSendingService('us', '4', '6');
+    $postcardService->hello('Hello from web.php', 'test@test.com');
+});
+
+Route::get('/facade',function (){
+    return  Postcard::hello('Hello from Facade', 'test@test.com');
+});

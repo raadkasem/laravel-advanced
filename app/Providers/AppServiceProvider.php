@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Http\View\Composers\ChannelsComposer;
 use App\Models\Channel;
+use App\PostcardSendingService;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -36,6 +37,11 @@ class AppServiceProvider extends ServiceProvider
 
 //      Option 3 : encapsulate- dedicated class.
         View::composer('partials.channels.*', ChannelsComposer::class);
+
+//        -----------------------------------Facades---------------------------------------
+        $this->app->singleton('Postcard', function ($app){
+            return new \App\PostcardSendingService('us', '4', '6');
+        });
 
     }
 }
