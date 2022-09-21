@@ -8,6 +8,6 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Polymorphic Relationships [Docs](https://laravel.com/docs/9.x/eloquent-relationships#polymorphic-relationships)
+## Facades [Docs](https://laravel.com/docs/9.x/facades)
 
-A polymorphic relationship allows the child model to belong to more than one type of model using a single association. For example, imagine you are building an application that allows users to share blog posts and videos. In such an application, a Comment model might belong to both the Post and Video models.
+In a Laravel application, a facade is a class that provides access to an object from the container. The machinery that makes this work is in the Facade class.
